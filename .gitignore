@@ -1,0 +1,7 @@
+target
+.DS_Store
+application-oauth.yml
+logs
+out
+.idea
+.github
