@@ -94,8 +94,8 @@ public class KeycloakInitializerRunner implements CommandLineRunner {
         return Map.of(EDU_APP_CLIENT_ID, roles);
     }
 
-    private static final String KEYCLOAK_SERVER_URL = "http://localhost:8080";
-    private static final String EMPLOYEE_SERVICE_REALM_NAME = "employee-service";
+    private static final String KEYCLOAK_SERVER_URL = "211.43.12.238:30777";
+    private static final String EMPLOYEE_SERVICE_REALM_NAME = "employee-services";
     private static final String EDU_APP_CLIENT_ID = "edu-app";
     private static final String EDU_APP_REDIRECT_URL = "http://localhost:3000/*";
     private static final List<UserPass> EDU_USER_LIST = Arrays.asList(
