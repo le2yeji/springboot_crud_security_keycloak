@@ -19,9 +19,6 @@ spring:
 # cache 사용을 위해 cache name 설정
   cache:
     cache-names: employee
-	output:
-	ansi:
-		enabled: DETECT
 #  security:
 #    user:
 #      name: admin
@@ -62,9 +59,7 @@ logging:
   pattern:
     console: "%d %-5level %logger : %msg%n"
   level:
-    org.springframework.web: ERROR
-    com.howtodoinjava: DEBUG
-    org.hibernate: ERROR
+    com.kt.edu: DEBUG
 
 #jasypt encryptor
 jasypt:
