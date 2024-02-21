@@ -41,9 +41,9 @@ jwt:
 
 app:
   cors:
-    allowed-origins: http://localhost:3000
+    allowed-origins: http://frontend-keycloak.yyazi.duckdns.org:30577
   keycloak:
-    server : http://localhost:3000
+    server : http://frontend-keycloak.yyazi.duckdns.org:30577
   #  keycloak:
   #    auth-server-url: ${KEYCLOAK_SERVER_URL:http://localhost:8080/auth}
   #    realm: ${KEYCLOAK_REALM:spring-boot-blueprint}
