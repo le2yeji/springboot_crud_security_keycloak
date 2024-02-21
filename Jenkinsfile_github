@@ -3,15 +3,17 @@ def gitBranch = 'master'
 def docker_registry = "ghcr.io"  
 
 // 본인 이미지 사용
-def imageName = "ghcr.io/shclub/edu12-backend"
+def imageName = "yyazi/springboot_crud_security_keycloak_prd"
 def fromImage = "ghcr.io/shclub/jre17-runtime:v1.0.0"
-def git_ops_name = "edu12-backend-gitops"
+def git_ops_name = "app-of-apps-keycloak"
+def git_ops_dir1_name = "charts"
+def git_ops_dir2_name = "backend"
 // 본인 Namespace
-def P_NAMESPACE = "edu30"
+def P_NAMESPACE = "deafult"
 // 본인 slave pvc
-def P_SLAVE_PVC = "jenkins-edu-slave-pvc"
+def P_SLAVE_PVC = "jenkins-edu4-slave-pvc"
 // 본인 이메일
-def P_EMAIL = "shclub@gmail.com"
+def P_EMAIL = "leyagi17@gmail.com"
 
 
 def TAG = getTag(gitBranch)
@@ -64,7 +66,7 @@ podTemplate(label: label, serviceAccount: 'jenkins-admin', namespace: P_NAMESPAC
                     sh """  
                         cd ~
                         git clone https://${USERNAME}:${PASSWORD}@github.com/${USERNAME}/${git_ops_name}
-                        cd ${git_ops_name}
+                        cd ${git_ops_name}/${git_ops_dir1_name}/${git_ops_dir2_name}
                         git checkout HEAD
                         kustomize edit set image ${imageName}:${TAG}
                         git config --global user.email ${P_EMAIL}
