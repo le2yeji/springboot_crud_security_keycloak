@@ -40,10 +40,10 @@ jwt:
       principal-attribute: preferred_username
 
 app:
-  cors:
-    allowed-origins: http://frontend-keycloak.yyazi.duckdns.org:30577
+  #cors:
+  #  allowed-origins: http://frontend-keycloak.yyazi.duckdns.org:30577
   keycloak:
-    server : http://frontend-keycloak.yyazi.duckdns.org:30577
+    server : http://211.43.12.238:30777
   #  keycloak:
   #    auth-server-url: ${KEYCLOAK_SERVER_URL:http://localhost:8080/auth}
   #    realm: ${KEYCLOAK_REALM:spring-boot-blueprint}
