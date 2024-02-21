@@ -56,10 +56,13 @@ app:
 # logging
 logging:
   config: classpath:log4j2.xml
-  pattern:
-    console: "%d %-5level %logger : %msg%n"
   level:
-    com.kt.edu: DEBUG
+    com.kt.edu: trace
+    org.springframework.security: DEBUG
+    org:
+      keycloak:
+        admin:
+          client: DEBUG
 
 #jasypt encryptor
 jasypt:
