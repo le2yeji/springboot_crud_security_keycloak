@@ -14,7 +14,7 @@ public class KeycloakAdminConfig {
                 .serverUrl("http://211.43.12.238:30777")
                 .realm("master")
                 .username("admin")
-                .password("admin")
+                .password("New1234!")
                 .clientId("admin-cli")
                 .build();
     }
