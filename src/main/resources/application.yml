@@ -4,7 +4,7 @@ server:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://localhost:8080/realms/employee-service
+          issuer-uri: http://211.43.12.238:30777/realms/employee-service
   tomcat:
     url-encoding: UTF-8
   servlet:
@@ -31,7 +31,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://localhost:8080/realms/employee-services # http://211.252.87.34:40007/realms/employee-services #http://211.252.87.34:40007/realms/company-services  # http://211.252.87.34:40007/realms/company-services
+          issuer-uri: http://211.43.12.238:30777/realms/employee-services # http://211.252.87.34:40007/realms/employee-services #http://211.252.87.34:40007/realms/company-services  # http://211.252.87.34:40007/realms/company-services
 
 jwt:
   auth:
