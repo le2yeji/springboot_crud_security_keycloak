@@ -9,7 +9,7 @@ def git_ops_name = "app-of-apps-keycloak"
 def git_ops_dir1_name = "charts"
 def git_ops_dir2_name = "backend"
 // 본인 Namespace
-def P_NAMESPACE = "keycloak"
+def P_NAMESPACE = "default"
 // 본인 slave pvc
 def P_SLAVE_PVC = "jenkins-edu4-slave-pvc"
 // 본인 이메일
