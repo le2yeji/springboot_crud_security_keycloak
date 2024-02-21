@@ -34,7 +34,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://211.43.12.238:30777/realms/employee-services # http://211.252.87.34:40007/realms/employee-services #http://211.252.87.34:40007/realms/company-services  # http://211.252.87.34:40007/realms/company-services
+          issuer-uri: http://211.43.12.238:30777/realms/employee-services
 
 jwt:
   auth:
@@ -61,7 +61,6 @@ logging:
   config: classpath:log4j2.xml
   pattern:
     console: "%d %-5level %logger : %msg%n"
-    file: "%d %-5level [%thread] %logger : %msg%n"
   level:
     org.springframework.web: ERROR
     com.howtodoinjava: DEBUG
