@@ -24,7 +24,7 @@ public class LoginController {
     // RSA Key 생성
     @PostMapping("/init-rsa")
     public ResponseEntity<?> initrsa(@RequestBody String data) {
-        log.info("data" + data);
+        log.debug("*********************Received data******************: {}" + data);
         return ResponseEntity.status(HttpStatus.OK).build();
     }
 //
