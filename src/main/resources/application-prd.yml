@@ -32,18 +32,18 @@ spring:
 #        useServerPrepStmts: true
 
 ## spring boot - actuator expose
-#management:
-#  endpoints:
-#    health:
-#      show-details: always
-#    loggers:
-#      enabled: true
-#    prometheus:
-#      enabled: true
-#    web:
-#      exposure:
-#        include: health,prometheus,loggers,metrics,caches,beans
-##        include: "*"
+management:
+ endpoints:
+   health:
+     show-details: always
+   loggers:
+     enabled: true
+   prometheus:
+     enabled: true
+   web:
+     exposure:
+       include: health,prometheus,loggers,metrics,caches,beans
+#        include: "*"
 ## app
 #app-info:
 #  node-ip: "192.168.0.1"

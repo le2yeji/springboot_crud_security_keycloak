@@ -11,10 +11,10 @@ public class KeycloakAdminConfig {
     @Bean
     public Keycloak keycloakAdmin() {
         return KeycloakBuilder.builder()
-                .serverUrl("http://localhost:8080")
+                .serverUrl("http://211.43.12.238:30777")
                 .realm("master")
                 .username("admin")
-                .password("admin")
+                .password("New1234!")
                 .clientId("admin-cli")
                 .build();
     }
