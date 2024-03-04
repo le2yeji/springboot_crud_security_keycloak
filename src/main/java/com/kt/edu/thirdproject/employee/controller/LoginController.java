@@ -1,6 +1,7 @@
-package com.kt.edu.thirdproject.common.service;
+package com.kt.edu.thirdproject.employee.controller;
 
 import com.kt.edu.thirdproject.common.config.RsaUtil;
+import com.kt.edu.thirdproject.employee.domain.EmployeeEntity;
 import com.kt.edu.thirdproject.employee.domain.RestMessage;
 import com.kt.edu.thirdproject.employee.domain.SigninRequest;
 import jakarta.servlet.http.HttpServletRequest;
@@ -21,20 +22,22 @@ import org.springframework.web.client.HttpClientErrorException;
 public class LoginController {
     private static String publicKeyStr = "";
     // RSA Key 생성
-    @PostMapping("/initRsa")
-    public ResponseEntity<?> initRsa() {
-        log.debug("@initRsa");
-
-        try {
-            String publicKeyStr = RsaUtil.generateRSAKey();
-            RestMessage restMessage = new RestMessage("success", publicKeyStr);
-            return ResponseEntity.ok(restMessage);
-        } catch (Exception e) {
-            log.error("Error occurred while RSA key generating", e);
-            RestMessage errorMessage = new RestMessage("error", "Error occurred while generating RSA key");
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(errorMessage);
-        }
+    @PostMapping("/init-rsa")
+    public ResponseEntity<?> initrsa(@RequestBody String data) {
+        log.info("data" + data);
+        return ResponseEntity.status(HttpStatus.OK).build();
     }
+//
+//        try {
+//            String publicKeyStr = RsaUtil.generateRSAKey();
+//            RestMessage restMessage = new RestMessage("success", publicKeyStr);
+//            return ResponseEntity.ok(restMessage);
+//        } catch (Exception e) {
+//            log.error("Error occurred while RSA key generating", e);
+//            RestMessage errorMessage = new RestMessage("error", "Error occurred while generating RSA key");
+//            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(errorMessage);
+//        }
+//    }
 
 //    @PostMapping("/signin")
 //    public ResponseEntity<?> createAuthenticationToken(@RequestBody SigninRequest request, HttpServletRequest httpServletRequest) throws InterruptedException  {
@@ -73,13 +76,13 @@ public class LoginController {
 //    }
 
 
-    @PostMapping("/signin")
-    public ResponseEntity<?> createAuthenticationToken(@RequestBody SigninRequest request, HttpServletRequest httpServletRequest) throws InterruptedException  {
-        String username = request.getUsername();
-
-        RestMessage restMessage = new RestMessage("success", publicKeyStr);
-        return ResponseEntity.ok(restMessage);
-
+//    @PostMapping("/signin")
+//    public ResponseEntity<?> createAuthenticationToken(@RequestBody SigninRequest request, HttpServletRequest httpServletRequest) throws InterruptedException  {
+//        String username = request.getUsername();
+//
+//        RestMessage restMessage = new RestMessage("success", publicKeyStr);
+//        return ResponseEntity.ok(restMessage);
+//
 //        // password RSA 복호화
 //        request.setPassword(RsaUtil.passwordDescryptRSA(request.getPassword()));
 //
@@ -99,5 +102,5 @@ public class LoginController {
 //                    .message("로그인에 오류가 발생되었습니다. 관리자에게 문의가 필요합니다.")
 //                    .build(), HttpStatus.INTERNAL_SERVER_ERROR);
 //        }
-    }
+//    }
 }
